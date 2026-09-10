@@ -1,4 +1,13 @@
-.services {
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}.services {
     text-align: center;
 }
 
