@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat;
 }
 
-body::before {
+body::before {background-image: url("background.jpg");
     content: "";
     position: fixed;
     width: 100%;
