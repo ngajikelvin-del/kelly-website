@@ -1,0 +1,11 @@
+.services {
+    text-align: center;
+}
+
+.service-box {
+    background: #1a1a1a;
+    margin: 20px auto;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+}
