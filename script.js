@@ -12,7 +12,6 @@ let bullets = [];
 let enemies = [];
 let animationId = null;
 let enemySpawnId = null;
-let enemyMoveId = null;
 let keyState = {};
 
 function updateHUD() {
