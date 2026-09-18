@@ -1,17 +1,11 @@
-/* === style.css — paste this whole file === */
-
-/* Page background + overlay */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #fff;
-    /* background image (must match the exact filename in your repo) */
     background: url("background.jpg") center/cover no-repeat fixed;
-    /* fallback color while image loads */
     background-color: #0f0f0f;
 }
 
-/* dark overlay so text is readable */
 body::before {
     content: "";
     position: fixed;
@@ -20,13 +14,11 @@ body::before {
     z-index: 0;
 }
 
-/* put all page content above overlay */
 .site {
     position: relative;
     z-index: 1;
 }
 
-/* NAV */
 nav {
     display: flex;
     justify-content: space-between;
@@ -54,7 +46,6 @@ nav ul li {
     cursor: pointer;
 }
 
-/* HERO */
 .hero {
     text-align: center;
     padding: 90px 20px;
@@ -67,14 +58,11 @@ nav ul li {
 }
 
 .hero p {
-    margin: 0 0 18px 0;
+    margin: 0 auto 18px auto;
     font-size: 18px;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* button */
 .btn {
     display: inline-block;
     margin-top: 12px;
@@ -84,9 +72,10 @@ nav ul li {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
 
-/* SERVICES */
 section {
     padding: 40px 20px;
 }
@@ -95,7 +84,6 @@ section {
     text-align: center;
 }
 
-/* service grid */
 .service-grid {
     display: flex;
     flex-wrap: wrap;
@@ -104,7 +92,6 @@ section {
     margin-top: 20px;
 }
 
-/* service box: translucent card */
 .service-box {
     background: rgba(26, 26, 26, 0.72);
     margin: 0 auto;
@@ -121,12 +108,91 @@ section {
     color: #e6faff;
 }
 
-/* CTA */
-section .btn {
-    margin-top: 18px;
+.game-section {
+    text-align: center;
 }
 
-/* responsive */
+.game-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px;
+    background: rgba(15, 15, 15, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.game-board {
+    position: relative;
+    width: min(90vw, 520px);
+    height: 340px;
+    margin: 20px auto 0;
+    border: 2px solid cyan;
+    border-radius: 16px;
+    background: linear-gradient(to bottom, #020b1f, #0d1d37 50%, #050d18);
+    overflow: hidden;
+}
+
+.player {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    width: 40px;
+    height: 52px;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, #9be7ff, #3bb6ff 55%, #1d5cff);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    box-shadow: 0 0 20px rgba(59, 182, 255, 0.7);
+}
+
+.bullet {
+    position: absolute;
+    width: 6px;
+    height: 18px;
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(255,255,255,0.9);
+}
+
+.enemy {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffd6d6 0%, #ff6b6b 30%, #b71c1c 100%);
+    box-shadow: 0 0 12px rgba(255, 101, 101, 0.8);
+}
+
+.explosion {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff7a6 0%, #ffb703 40%, rgba(255, 120, 0, 0.3) 100%);
+    box-shadow: 0 0 12px rgba(255, 198, 0, 0.8);
+    animation: pop 0.3s ease-out forwards;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2.8); opacity: 0; }
+}
+
+.game-btn {
+    margin-top: 0;
+}
+
+.cta {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
 @media (max-width: 700px) {
     .hero h1 {
         font-size: 28px;
@@ -141,9 +207,3 @@ section .btn {
     }
 }
 
-/* small helper to keep page content readable */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 18px;
-}
