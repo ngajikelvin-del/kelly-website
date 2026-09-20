@@ -236,6 +236,16 @@ h3 {
     margin-bottom: 0;
 }
 
+.contact-email {
+    margin: 14px 0 0;
+    color: rgba(255, 255, 255, .82);
+}
+
+.contact-email a {
+    color: var(--white);
+    font-weight: 800;
+}
+
 .button-light {
     flex-shrink: 0;
     color: var(--ink);
