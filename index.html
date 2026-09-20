@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="site">
+    <div class="site" id="home">
         <nav class="container">
             <h2>Kelly Growth</h2>
             <ul>
-                <li>Home</li>
-                <li>Services</li>
-                <li>Game</li>
-                <li>Contact</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#game">Game</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
 
@@ -24,17 +24,17 @@
                 We help brands save time, reach more customers, and run faster replies with
                 custom messaging systems built for growth.
             </p>
-            <a href="https://wa.me/2347088554786?text=Hello%20I%20need%20your%20service" class="btn">
+            <a href="https://wa.me/2347088554786?text=Hello%20I%20need%20your%20service" class="btn" target="_blank" rel="noopener noreferrer">
                 Message Me Now
             </a>
         </header>
 
-        <section class="services container">
+        <section class="services container" id="services">
             <h2>My Services</h2>
 
             <div class="service-grid">
                 <div class="service-box">
-                    <h3>?? Bulk Messaging</h3>
+                    <h3>Bulk Messaging</h3>
                     <p>
                         Reach hundreds of customers instantly and promote your products faster.
                         Save time and increase your sales with automated messaging.
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="service-box">
-                    <h3>?? Auto Reply Bot</h3>
+                    <h3>Auto Reply Bot</h3>
                     <p>
                         Never miss a customer again. Automatically reply to messages and keep your
                         business active 24/7 even when you're offline.
@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="service-box">
-                    <h3>?? WhatsApp Automation</h3>
+                    <h3>WhatsApp Automation</h3>
                     <p>
                         Turn your WhatsApp into a powerful business tool that attracts, engages,
                         and converts customers easily.
@@ -59,7 +59,7 @@
             </div>
         </section>
 
-        <section class="game-section container">
+        <section class="game-section container" id="game">
             <div class="game-card">
                 <h2>Space Shooter</h2>
                 <p id="scoreText">Score: 0 &nbsp; Lives: 3 &nbsp; Level: 1</p>
@@ -68,13 +68,19 @@
                 <div id="gameBoard" class="game-board" aria-label="Game board">
                     <div id="player" class="player" aria-label="Player ship"></div>
                 </div>
+
+                <div class="touch-controls" aria-label="Touch controls">
+                    <button id="touchLeft" class="touch-btn" type="button" aria-label="Move left">◀</button>
+                    <button id="touchFire" class="touch-btn fire" type="button" aria-label="Fire">Fire</button>
+                    <button id="touchRight" class="touch-btn" type="button" aria-label="Move right">▶</button>
+                </div>
             </div>
         </section>
 
-        <section class="container cta">
+        <section class="container cta" id="contact">
             <h2>Ready to Grow Your Business?</h2>
             <p>Contact me today and start automating your WhatsApp.</p>
-            <a href="https://wa.me/2347088554786?text=Hello%20I%20need%20your%20service" class="btn">
+            <a href="https://wa.me/2347088554786?text=Hello%20I%20need%20your%20service" class="btn" target="_blank" rel="noopener noreferrer">
                 Message Me Now
             </a>
         </section>
